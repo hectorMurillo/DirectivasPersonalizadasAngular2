@@ -1,0 +1,25 @@
+
+<!--<input type="text" [(ngModel)]="alerta">-->
+<h1>{{alerta}}</h1>
+
+<div [ngSwitch]="alerta">
+<div *ngSwitchCase="'success'">success</div>
+<div *ngSwitchCase="'info'">info</div>
+<div *ngSwitchCase="'warning'">warning</div>
+<div *ngSwitchDefault>Danger</div>
+</div>
+  <input [(ngModel)]="alerta" placeholder="name"/>
+  <div [ngSwitch]="alerta">
+      <div *ngSwitchCase="'success'" class="alert alert-success" role="alert">
+        <strong>Well done!</strong>
+      </div>
+      <div *ngSwitchCase="'info'" class="alert alert-info" role="alert">
+        <strong>Heads up!</strong>
+      </div>
+      <div *ngSwitchCase="'warning'" class="alert alert-warning" role="alert">
+          <strong>Warning!</strong>
+      </div>
+      <div *ngSwitchCaseDefault class="alert alert-danger" role="alert">
+          <strong>Danger!</strong>
+      </div>
+  </div>
